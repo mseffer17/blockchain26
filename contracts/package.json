@@ -1,0 +1,21 @@
+{
+  "name": "@rutli/contracts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rütli smart contracts (Foundry). Dependencies are installed with npm (no git submodules).",
+  "license": "MIT",
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test",
+    "test:story": "forge test --match-test test_TheWholeStory -vv",
+    "coverage": "forge coverage --ir-minimum --report summary",
+    "gas": "forge test --gas-report"
+  },
+  "dependencies": {
+    "@account-abstraction/contracts": "0.8.0",
+    "@openzeppelin/contracts": "5.6.1"
+  },
+  "devDependencies": {
+    "forge-std": "github:foundry-rs/forge-std#v1.11.0"
+  }
+}

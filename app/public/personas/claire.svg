@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Claire, the account holder (illustration)">
+  <rect width="200" height="200" fill="#DCE6E4"/>
+  <path d="M30 200c6-38 34-58 70-58s64 20 70 58z" fill="#24344A"/>
+  <path d="M84 138l16 22 16-22" fill="#F4F1F0"/>
+  <rect x="88" y="118" width="24" height="26" rx="10" fill="#E7B9A0"/>
+  <path d="M56 92c0-34 20-56 46-56s44 20 44 52c0 14-4 26-10 34-2-16-8-30-14-40-12 8-36 10-56 6-4 10-6 22-6 34-3-8-4-18-4-30z" fill="#C9B48E"/>
+  <ellipse cx="100" cy="94" rx="32" ry="38" fill="#EFC6AE"/>
+  <path d="M68 86c4-22 18-36 34-36 18 0 30 12 32 34-14-10-40-12-66 2z" fill="#C9B48E"/>
+  <circle cx="87" cy="97" r="9" fill="none" stroke="#2C3A3F" stroke-width="2.5"/>
+  <circle cx="113" cy="97" r="9" fill="none" stroke="#2C3A3F" stroke-width="2.5"/>
+  <path d="M96 97h8" stroke="#2C3A3F" stroke-width="2.5"/>
+  <circle cx="87" cy="97" r="2.4" fill="#2C3A3F"/>
+  <circle cx="113" cy="97" r="2.4" fill="#2C3A3F"/>
+  <path d="M90 116c6 5 14 5 20 0" fill="none" stroke="#A4584A" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

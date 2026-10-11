@@ -1,0 +1,20 @@
+{
+  "solidity.packageDefaultDependenciesContractsDirectory": "src",
+  "solidity.packageDefaultDependenciesDirectory": "node_modules",
+  "solidity.formatter": "forge",
+  "[solidity]": {
+    "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "**/node_modules": true,
+    "contracts/out": true,
+    "contracts/cache": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "contracts/out": true,
+    "contracts/cache": true,
+    "services/data": true
+  }
+}

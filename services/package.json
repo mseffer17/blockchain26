@@ -1,0 +1,27 @@
+{
+  "name": "@rutli/services",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mocked institutions, each a separate process with its own storage: Swissquote core banking, Swissquote co-signer, La Poste guardian, video-identification provider, gas station (bundler + paymaster signer), watchtower.",
+  "type": "module",
+  "scripts": {
+    "start:sq-core": "tsx src/sq-core/index.ts",
+    "start:sq-cosigner": "tsx src/sq-cosigner/index.ts",
+    "start:poste-guardian": "tsx src/poste-guardian/index.ts",
+    "start:video-ident": "tsx src/video-ident/index.ts",
+    "start:gas-station": "tsx src/gas-station/index.ts",
+    "start:watchtower": "tsx src/watchtower/index.ts"
+  },
+  "dependencies": {
+    "@rutli/sdk": "*",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jose": "^6.1.0",
+    "viem": "^2.57.4",
+    "@scure/bip39": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3"
+  }
+}

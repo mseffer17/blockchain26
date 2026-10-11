@@ -1,0 +1,49 @@
+{
+  "name": "rutli-wallet",
+  "version": "1.0.0",
+  "private": true,
+  "description": "R\u00fctli \u2014 the self-custody wallet Swissquote could launch. Swissquote Wallet Challenge, EPFL Hackathon 2026.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "workspaces": [
+    "packages/sdk",
+    "services",
+    "app",
+    "exit-app"
+  ],
+  "scripts": {
+    "postinstall": "npm install --prefix contracts --no-audit --no-fund",
+    "build:contracts": "cd contracts && forge build",
+    "test:contracts": "cd contracts && forge test",
+    "abis": "tsx scripts/gen-abis.ts",
+    "chain": "anvil --chain-id 31337 --port 8545 --hardfork osaka --silent",
+    "setup:local": "tsx scripts/setup.ts --network local",
+    "setup:base-sepolia": "tsx scripts/setup.ts --network base-sepolia",
+    "services": "concurrently -n core,cosign,poste,ident,gas,watch -c blue,magenta,yellow,cyan,green,gray \"npm:svc:sq-core\" \"npm:svc:sq-cosigner\" \"npm:svc:poste-guardian\" \"npm:svc:video-ident\" \"npm:svc:gas-station\" \"npm:svc:watchtower\"",
+    "svc:sq-core": "npm run start:sq-core -w services",
+    "svc:sq-cosigner": "npm run start:sq-cosigner -w services",
+    "svc:poste-guardian": "npm run start:poste-guardian -w services",
+    "svc:video-ident": "npm run start:video-ident -w services",
+    "svc:gas-station": "npm run start:gas-station -w services",
+    "svc:watchtower": "npm run start:watchtower -w services",
+    "app": "npm run dev -w app",
+    "exit-app": "npm run dev -w exit-app",
+    "build:exit-app": "npm run build -w exit-app",
+    "dev": "tsx scripts/dev.ts",
+    "e2e": "tsx scripts/e2e.ts",
+    "test:ui": "tsx scripts/ui-test.ts",
+    "typecheck": "tsc -p packages/sdk && tsc -p services && tsc -p app && tsc -p exit-app && tsc -p scripts",
+    "test:sdk": "npm test -w packages/sdk",
+    "test": "npm run test:contracts && npm run test:sdk"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "concurrently": "^9.2.1",
+    "playwright": "^1.56.1",
+    "tsx": "^4.20.6",
+    "typescript": "~5.9.3"
+  }
+}
